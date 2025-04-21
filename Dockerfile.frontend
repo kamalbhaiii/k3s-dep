@@ -8,8 +8,6 @@ RUN npm install
 
 COPY frontend/ .
 
-ENV VITE_BACKEND http://192.168.0.239:30070
-
 RUN npm run build
 
 FROM nginx:alpine

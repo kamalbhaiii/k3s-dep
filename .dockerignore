@@ -22,5 +22,5 @@
 */*.njsproj
 */*.sln
 */*.sw?
-*/.env
+backend/.env
 *.png
