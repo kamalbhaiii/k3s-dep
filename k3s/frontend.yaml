@@ -9,6 +9,7 @@ spec:
       app: frontend
   template:
     spec:
+      nodeName: worker-node-2  
       nodeSelector:
         node-role.kubernetes.io/worker: "true"
     metadata:
