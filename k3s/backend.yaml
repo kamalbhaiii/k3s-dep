@@ -33,7 +33,7 @@ metadata:
 spec:
   type: NodePort
   selector:
-    app: frontend
+    app: backend
   ports:
     - protocol: TCP
       port: 5000
