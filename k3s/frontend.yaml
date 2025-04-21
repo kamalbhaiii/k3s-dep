@@ -22,7 +22,7 @@ spec:
         - containerPort: 80
         env:
         - name: VITE_BACKEND
-        value: http://192.168.0.239:30070
+          value: http://192.168.0.239:30070
 
 ---
 
