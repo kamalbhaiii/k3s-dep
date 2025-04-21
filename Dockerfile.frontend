@@ -1,21 +1,21 @@
-ARG VITE_BACKEND
-
 FROM node:18-alpine AS builder
 
 WORKDIR /app
 
 COPY frontend/package*.json ./
+
 RUN npm install
 
 COPY frontend/ .
 
-
-ENV VITE_BACKEND=$VITE_BACKEND
-
+ENV VITE_BACKEND http://192.168.0.239:30070
 
 RUN npm run build
 
 FROM nginx:alpine
+
 COPY --from=builder /app/dist /usr/share/nginx/html
+
 EXPOSE 80
+
 CMD ["nginx", "-g", "daemon off;"]
