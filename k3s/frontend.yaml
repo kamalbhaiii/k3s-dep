@@ -17,9 +17,6 @@ spec:
         image: kamalbhaiii/k3s-frontend:armv7
         ports:
         - containerPort: 5173
-        env:
-        - name: VITE_BACKEND
-          value: http://localhost:5000
 
 ---
 
